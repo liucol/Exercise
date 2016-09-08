@@ -1,0 +1,30 @@
+<!doctype html><!-- 使浏览器以标准形式解析文档 -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>元素节点</title>
+	</head>
+	<body>
+	<!--node,node节点的应用-->
+		<div id="container"><a id="&a">元素文本节点</a></div>
+	<script type="text/javascript">
+	   //父元素节点
+       var divNode=document.getElementById("container");
+       console.log(divNode.nodeName+"/"+divNode.nodeValue);
+       //子元素节点
+       var attrNode=divNode.attributes[0];
+       console.log(attrNode.nodeName+"/"+attrNode.nodeValue);
+       //文本节点
+       var textNode=divNode.childNodes[0];
+       console.log(textNode.nodeName+"/"+textNode.nodeValue);
+       //注释节点
+        var commentNode=document.body.childNodes[1];
+        console.log(commentNode.nodeName+"/"+commentNode.nodeValue);
+        //doctype的名字和值
+        console.log(document.doctype.nodeName+"/"+document.doctype.nodeValue);
+        //文档片段节点
+        var frag=document.createDocumentFragment();
+        console.log(frag.nodeName+"/"+frag.nodeValue);
+	</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>计时器setTimeout()</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"><!--bootstrap框架引用-->
+        <link rel="stylesheet" href="Font-Awesome-3.2.1/css/font-awesome.min.css"><!--引用图标文件-->
+        <link rel="stylesheet" href="#">
+        <script src="js/jquery.js"></script><!--加载js插件的文件-->
+        <script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script><!--加载js，如下拉列表需要-->
+		<script src="js/npm.js"></script>
+		<script type="text/javascript">
+            var num=0;//放在function的上面
+           function snum(){
+           	 
+              document.getElementById("Star").value=num;
+              num=num+1;
+              setTimeout("snum()",1000);
+           }
+           //如果没有按钮：setTimeout("snum()",1000);
+		</script>
+	</head>
+	<body>
+	<form>
+		<input type="text" id="Star"/>
+		<input type="button" id="star" onclick="snum()"><!--点击按钮触发事件函数-->
+	</form>
+	</body>
+</html>

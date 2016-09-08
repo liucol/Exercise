@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>选项卡</title>
+<style>
+.x input {
+	background: white;
+}
+.x input.active {
+	background: red;
+}
+.x div {
+	width: 200px;
+	height: 100px;
+	border: 1px solid blue;
+	display: none;
+}
+</style>
+<script>
+window.onload=function() {
+	var divX=document.getElementById("div1");
+	oBut=divX.getElementsByTagName("input");
+	oDiv=divX.getElementsByTagName("div");
+	for(var i=0;
+	i<oBut.length;
+
+	i++) {
+		oBut[i].index=i;
+
+		oBut[i].onclick= function() {
+			for(var i=0;
+			i<oBut.length;
+
+			i++) {
+				oBut[i].className='';
+				oDiv[i].style.display="none";
+			}
+			this.className="active";
+			oDiv[this.index].style.display='block';
+		}
+	}
+}
+;
+</script>
+</head>
+<body>
+<div class="x"id="div1">
+<input class="active"type="button"name=""value="财经">
+<input type="button"name=""value="体育">
+<input type="button"name=""value="社会">
+<div style="display:block">俄罗斯卢布暴跌物价上涨 居民抢购生活物资 专题</div>
+<div>小罗为亨利送上祝福 球场拥抱基情满满</div>
+<div>佳木斯设假警察保卫政府大楼 称上访人员管不住</div>
+</div>
+</body>
+</html>

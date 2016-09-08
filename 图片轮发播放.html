@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>图片轮播（一）</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+.div1 {
+	position: relative;
+	height: 100%;
+}
+.div1 img {
+	height: 400px;
+	width: 400px;
+	position: relative;
+	display: none;
+	margin: 100px auto ;
+}
+.div1 a {
+	font-size: 50pt;
+	color: #fff;
+	position: absolute;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background: black;
+	filter: alpha(opacity=20);
+	-moz-opacity: 0.2;
+	-khtml-opacity: 0.2;
+	opacity: 0.2;
+	line-height: 100px;
+	text-align: center;
+}
+.a1 {
+	top: 50%;
+	left: 10%;
+}
+.a2 {
+	top: 50%;
+	left: 90%;
+}
+</style>
+</head>
+<body>
+<div class="div1"id="div1">
+<img src="images/1.jpeg"style="display:block"/>
+<img src="images/2.jpeg"/>
+<img src="images/3.jpeg"/>
+<img src="images/4.jpeg"/>
+<a class="a1"> <</a>
+<a class="a2"> > </a>
+</div>
+<script>
+window.onload=function() {
+	var oDiv1=document.getElementById("div1");
+	var oimgs=oDiv1.getElementsByTagName("img");
+	var oA=oDiv1.getElementsByTagName("a");
+
+	oA[0].onclick=function() {
+		var i=fnD(oimgs);
+
+		if(i===0) {
+			return;
+		}
+		oimgs[i].style.display="none";
+		oimgs[i-1].style.display="block";
+		return;
+	}
+	oA[1].onclick=function() {
+		var i=fnD(oimgs);
+
+		if(i===3) {
+			return;
+		}
+		oimgs[i].style.display="none";
+		oimgs[i+1].style.display="block";
+		return;
+	}
+}
+//获取当前图片的下标
+function fnD(images) {
+	for(var i=0;
+	i<images.length;
+
+	i++) {
+		if(images[i].style.display==='block') {
+			return i;
+		}
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>倒计时</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"><!--bootstrap框架引用-->
+        <link rel="stylesheet" href="Font-Awesome-3.2.1/css/font-awesome.min.css"><!--引用图标文件-->
+        <link rel="stylesheet" href="#"><!--引入自己写的css文件-->
+        <script src="js/jquery.js"></script><!--加载js插件的文件-->
+        <script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script><!--加载js，如下拉列表需要-->
+		
+		<style type="text/css">
+             font-size:200px;
+             text-align:center;
+        </style>
+	</head>
+	<body>
+	<h1>倒计时：<span>10</span></h1>
+     <script >
+       $(document).ready(function(){
+        var el=$("h1 span").first();
+        var i=9;
+        var interval=setInterval(function(){
+            el.html(i);
+            i--;
+            console.log(i);
+            console.info(i);
+            if(i<0){
+                clearInterval(interval);
+            }
+        }, 1000);
+       });
+     </script> 
+
+	</body>
+</html>

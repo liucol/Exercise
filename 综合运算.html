@@ -1,0 +1,42 @@
+<!DOCTYPE  HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系好安全带,准备启航</title>
+
+<script type="text/javascript">
+
+  //通过javascript的日期对象来得到当前的日期，并输出。
+  var mydate=new Date();
+  var weeken=["星期一","星期二","星期三","星期四","星期五","星期六","星期日"];
+  var mynum=mydate.getDay();
+  document.write(mydate.getFullYear()+"年"+(mydate.getMonth()+1)+"月"+mydate.getDate()+"日"+" "+weeken[mynum]);
+  
+
+  
+  
+  //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
+  var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+ var scorearray=scoreStr.split(";");
+ var scorearray2=new Array();
+ var sum=0;
+for(var i=0;i<scorearray.length;i++){
+    scorearray2[i]=scorearray[i].split(":");//从：处分割如：小明：87的字符串成：小明，87将此数组存储在scorearray2[i]一维数组中
+    /* var num = scorearray2[i].indexOf(':');//找到：所在的位置的下标
+        sum += parseInt(scorearray2[i].substr(num+1,2));//截取字符串,从num+1的位置截取且包括num+1的位置，2是截取的字符串的长度，使用parseInt是因为括号内的对象是字符串，用该方法把字符串转换得到整数相加*/
+    }
+
+  //从数组中将成绩撮出来，然后求和取整，并输出。
+  for(var i=0;i<scorearray.length;i++){
+      sum+=parseInt(scorearray2[i][1]);
+      
+      
+  }
+  Avg=sum/(scorearray2.length);
+  document.write("--班级平均分是："+Avg);
+
+</script>
+</head>
+<body>
+</body>
+</html>

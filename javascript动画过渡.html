@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		    <link rel="stylesheet" href="css/bootstrap.min.css"><!--bootstrap框架引用-->
+        <link rel="stylesheet" href="Font-Awesome-3.2.1/css/font-awesome.min.css"><!--引用图标文件-->
+        <link rel="stylesheet" href="">
+        <script src="js/jquery.js"></script><!--加载js插件的文件-->
+        <script src="bootstrap-master/js/transition.js">
+        </script>
+        <script src="js/jquery-2.1.4.min.js"></script>
+		    <script src="js/bootstrap.min.js"></script><!--加载js，如下拉列表需要-->
+		    <script src="js/npm.js"></script>
+	</head>
+	<body>
+	 <h1>javascript插件动画过度</h1>
+   <button class="btn btn-primary" type="button">点击我</button>
+   <div class="modal fade" id="mymodal">
+       <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">模态弹出窗标题</h4>
+              </div>
+              <div class="modal-body">
+                <p>模态弹出窗主体内容</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+              </div>
+          </div><!-- /.modal-content -->
+       </div><!-- /.modal-dialog -->
+   </div><!-- /.modal -->
+<script>
+  $(function(){
+    $(".btn").click(function(){
+      $("#mymodal").modal("toggle");
+    });
+  });
+</script>
+<br/>
+<span >cccc</span>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>javascript</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"><!--bootstrap框架引用-->
+        <link rel="stylesheet" href="css/font-awesome.min.css"><!--引用图标文件-->
+        <link rel="stylesheet" href="#">
+        <script src="js/jquery.js"></script><!--加载js插件的文件-->
+        <script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script><!--加载js，如下拉列表需要-->
+	</head>
+	<body>
+	<script type="text/javascript">
+var infos=[['小A','女','21','大一'],['小B','男','23','大三'],['小C',' 男','24','大四'],['小D','女','21','大一'],['小E','女','22','大四'],['小F','男','21','大一'],['小G','女','22','大二'],['小H','女','20','大三'],['小I','女','20','大一'],['小J','男','20','大三']];
+ //第一步把之前的数据写成一个数组的形式,定义变量为 infos
+document.write("大一所有学生："+"</br>");
+for(var j=0;j<infos.length;j++){
+   if(infos[j][3]=="大一"){
+      document.write("&nbsp&nbsp"+infos[j]+"</br>");
+   }
+}
+
+
+document.write("大一所有女生："+"</br>");
+ for(var i=0;i<infos.length;i++){
+     if (infos[i][3]=='大一'&&infos[i][1]=='女') {
+     	document.write("&nbsp&nbsp"+infos[i]+"<br/>");
+     };
+ }
+
+ function app1(x,y){
+    if(x>y){
+           return x;
+           }else if(x<y){
+             return y;
+             }else{
+    	      return "相等";
+        }
+    }
+
+var aple1=app1(5,5);
+var aple2=app1(6,3);
+  document.write(" 5 和 4 的较大值是:"+aple1+"<br>");
+  document.write(" 6 和 3 的较大值是:"+aple2 ); 
+
+ </script>
+	</body>
+</html>
