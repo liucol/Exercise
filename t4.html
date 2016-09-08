@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>节点</title>
+        
+    </head>
+    <body>
+    <ul>
+    	<li>javascript</li>
+    	<li>html</li>
+    	<li>php</li>
+    </ul>
+    <script type="text/javascript">
+        var mynode=document.getElementsByTagName("li");
+        for (var i = 0; i < mynode.length; i++) {
+            document.write(mynode[i].nodeName+" ");
+            document.write(mynode[i].nodeValue+" ");
+            document.write(mynode[i].nodeType+"</br>");
+        };
+    </script>
+    </body>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>设置推迟一小时</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"><!--bootstrap框架引用-->
+        <link rel="stylesheet" href="Font-Awesome-3.2.1/css/font-awesome.min.css"><!--引用图标文件-->
+        <link rel="stylesheet" href="#">
+        <script src="js/jquery.js"></script><!--加载js插件的文件-->
+        <script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script><!--加载js，如下拉列表需要-->
+		<script src="js/npm.js"></script>
+		<script type="text/javascript">
+             var mydate=new Date();
+             document.write("当前时间是："+mydate+"<br>");
+             mydate.setTime(mydate.getTime()+60*60*1000);
+             document.write("推迟一小时的当前时间是："+mydate);
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

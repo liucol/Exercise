@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>替换元素节点</title>
+</head>
+<body>
+
+
+  <div><span id="oldnode">JavaScript</span>是一个很常用的技术，为网页添加动态效果。</div>
+  <!-- <a href="javascript:replaceMessage()"> 将加粗改为斜体</a> -->
+  <input type="button" onclick="replaceMessage()" value="anniu">
+
+    <script type="text/javascript">
+      function replaceMessage(){
+          var newnode=document.createElement("p");
+          var newnodetext=document.createTextNode("JavaScript和Html");
+          newnode.appendChild(newnodetext);
+          var oldnode=document.getElementById("oldnode");
+		      oldnode.parentNode.replaceChild(newnode,oldnode);
+       }    
+  </script>
+  
+ </body>
+</html>

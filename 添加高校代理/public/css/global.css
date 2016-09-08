@@ -1,0 +1,93 @@
+body{
+	padding:0px;
+	margin:0px;
+	background-color: #ddd;
+}
+.no-padding{
+	padding:0px;
+}
+.selected{
+	background-color: #384064;
+}
+
+ .navigation{
+	background-color: #fff;
+	border-bottom: 5px solid #434c75;
+	margin-left: 20px;
+}
+.navigation-content{
+	padding-top: 20px;
+}
+.navigation-content p{
+	font-size: 10px;
+}
+.logo{
+	
+	padding:0px;
+	margin:0px;
+	background-color: #434c75;
+}
+
+.sidebar{
+	margin-top: 10px;
+	background-color: #434c75;
+	padding:0px;
+	height: 670px;
+	color:#fff;
+}
+.sidebar > ul > li > a{
+   padding-left: 60px;
+	font-size: 12px;
+	color: #fff;
+}
+.sidebar > ul > li > a:link{
+	color:#fff;
+}
+.sidebar > ul > li > a:visited{
+    background-color: #384064;
+    color:#fff;
+}
+.sidebar > ul > li > a:hover{
+   background-color: #fff;
+   color:#384064;
+}
+.sidebar > h4{
+	color: #fff;
+	font-size: 15px;
+	margin-left: 25px;
+	margin-top: 20px;
+}
+.icon-move{
+	margin-right: 10px;
+}
+.icon-move-click{
+	margin-right: 15px;
+}
+#company-item,#contract-item,#job-info-item,#school-manager-item,#report-item{
+     display:none;
+}
+
+.label-img{
+	margin-left: -10px;
+}
+.label-img > img{
+	width:130px;
+	margin-top: 20px;
+}
+.content{
+	background-color: #fff;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+.content > form{
+	margin-top: 80px;
+	margin-left: 180px;
+}
+.snow{
+	color: red;
+}
+.btn-confirm{
+	margin-left: 195px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
